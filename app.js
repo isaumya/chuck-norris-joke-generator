@@ -6,7 +6,7 @@ function getJokes(e) {
 	const numbers = document.getElementById('number').value.trim();
 
 	// Check if the user has actually inputted anything within the form, otherwise throw error message
-	if(numbers === "" || numbers === null || !isNaN(numbers)) {
+	if(numbers === "" || numbers === null || isNaN(numbers)) {
 		showAlert('Please enter a valid number of jokes.', 'error');
 	} else {
 		// Create a XMLHttpRequest object

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg=" crossorigin="anonymous" />
+	<link rel="icon" href="https://cdn.isaumya.com/wp-content/uploads/2017/08/cropped-isaumya-new-logo-2017-emblem-800-png-32x32.png" sizes="32x32" />
+  <link rel="icon" href="https://cdn.isaumya.com/wp-content/uploads/2017/08/cropped-isaumya-new-logo-2017-emblem-800-png-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon-precomposed" href="https://cdn.isaumya.com/wp-content/uploads/2017/08/cropped-isaumya-new-logo-2017-emblem-800-png-180x180.png" />
+  <meta name="msapplication-TileImage" content="https://cdn.isaumya.com/wp-content/uploads/2017/08/cropped-isaumya-new-logo-2017-emblem-800-png-270x270.png" />
+	<title>Chuck Norris Joke Generator - A Simple Vanilla JS Web App</title>
+	<meta name="description" content="Chuck Norris Joke Generator is a simple vanilla javascript application with XHR Asynchronous API Fetching technology.">
+	<style>
+		.text-center {
+			text-align: center;
+		}
+		.error {
+			background-color: red;
+			color: white;
+			padding: 7px 20px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Chuck Norris Joke Generator</h2>	
+		<form id="joke-selection">
+			<div>
+				<label for="number of jokes">Number of jokes</label>
+				<input type="number" id="number">
+			</div>
+			<div>
+				<button class="get-jokes">Get Jokes</button>
+			</div>
+		</form>
+		<ul class="jokes"></ul>
+	</div>
+	<script src="./app.js"></script>
+</body>
+</html>

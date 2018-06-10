@@ -32,15 +32,18 @@ function getJokes(e) {
 					output = '<li>Something went wrong...</li>';
 				}
 				// Show "here are the jokes..." before showing the jokes
-				const container = document.querySelector('.container'); // insert after the container
-				const jokeWrapper = document.querySelector('.jokes'); // insert before the joke wrapper
-				const heading = document.createElement('h3');
-				heading.classList.add('text-center');
-				heading.appendChild(document.createTextNode('Here are the jokes...'));
-				// Lets add the heading before actually showing the jokes
-				container.insertBefore(heading, jokeWrapper);
+				// check if the section is already showing on the screen, if so, don't show again
+				if(document.querySelector('.intro') === null) {
+					const container = document.querySelector('.container'); // insert after the container
+					const jokeWrapper = document.querySelector('.jokes'); // insert before the joke wrapper
+					const heading = document.createElement('h3');
+					heading.classList.add('intro', 'text-center');
+					heading.appendChild(document.createTextNode('Here are the jokes...'));
+					// Lets add the heading before actually showing the jokes
+					container.insertBefore(heading, jokeWrapper);
+				}
 				// Show the jokes to the front end within the ul.jokes
-				jokeWrapper.innerHTML = output;
+				document.querySelector('.jokes').innerHTML = output;
 			}
 		}
 
